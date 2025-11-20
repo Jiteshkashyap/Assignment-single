@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "04e5b748-c5ca-4980-9d2e-b94b8e990c47",
+		"name": "SingleMind",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43033509",
+		"_collection_link": "https://my3333-5171.postman.co/workspace/SingleMindInfo~1c2f9104-fb71-42db-ad96-bd1697c00522/collection/43033509-04e5b748-c5ca-4980-9d2e-b94b8e990c47?action=share&source=collection_link&creator=43033509"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getuser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlZTIzYWRlZjNmM2MwZDY0NDExODciLCJyb2xlIjoidXNlciIsImlhdCI6MTc2MzYzMzc2NiwiZXhwIjoxNzYzNjM0NjY2fQ.t4CVgSpgz5bxa8DgRRcD4olc5qx9kv0dox89pcQ616U",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlZTIzYWRlZjNmM2MwZDY0NDExODciLCJyb2xlIjoidXNlciIsImlhdCI6MTc2MzYzMzg5OCwiZXhwIjoxNzYzNjM0Nzk4fQ.t8Wv5qfoinq5TobeBq097B5UTfG3R1v5ZXXb3kzTB6Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "rohan321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:7001/api/user/update",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "roleupdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlY2E1OGM4NGRmYWU1MTAyZWNhZDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjM2MzQzOTgsImV4cCI6MTc2MzYzNTI5OH0.41ZLbWkGPMtpNUYn_1c0ffEe-qHRg3Z_uvkUikmSAE8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:7001/api/admin/users/691ee23adef3f3c0d6441187/role",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"691ee23adef3f3c0d6441187",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteuser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlY2E1OGM4NGRmYWU1MTAyZWNhZDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjM2MzQzOTgsImV4cCI6MTc2MzYzNTI5OH0.41ZLbWkGPMtpNUYn_1c0ffEe-qHRg3Z_uvkUikmSAE8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:7001/api/admin/users/691ee23adef3f3c0d6441187",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"691ee23adef3f3c0d6441187"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getalluser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlY2E1OGM4NGRmYWU1MTAyZWNhZDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjM2MzQzOTgsImV4cCI6MTc2MzYzNTI5OH0.41ZLbWkGPMtpNUYn_1c0ffEe-qHRg3Z_uvkUikmSAE8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:7001/api/admin/getAllUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"admin",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTFlY2E1OGM4NGRmYWU1MTAyZWNhZDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjM2MzQzOTgsImV4cCI6MTc2MzYzNTI5OH0.41ZLbWkGPMtpNUYn_1c0ffEe-qHRg3Z_uvkUikmSAE8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:7001/api/admin/users/691ee23adef3f3c0d6441187",
+							"host": [
+								"localhost"
+							],
+							"port": "7001",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"691ee23adef3f3c0d6441187"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
